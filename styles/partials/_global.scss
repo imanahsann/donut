@@ -1,0 +1,62 @@
+// Global styles
+
+// Variables
+$primaryColor: #FF87AB;
+$secondaryColor: #43261e;
+$accentColor: #FCC8C2;
+$lightPink: #FCDEED;
+$whiteShade: #edeee0;
+
+// Mix-ins
+@mixin primaryFont($fontSize) {
+    font-size: $fontSize * 1px;
+    font-size: ($fontSize/10) * 1rem;
+    font-family: 'Poppins', Sans-Serif;
+    line-height: 1.6;
+}
+
+@mixin secondaryFont($fontSize) {
+    font-size: $fontSize * 1px;
+    font-size: ($fontSize/10) * 1rem;
+    font-family: 'Abril Fatface', Cursive;
+}
+
+// Layout
+html {
+    font-size: 62.5%;
+    // 10px
+}
+
+body {
+    background: $whiteShade;
+    color: $secondaryColor;
+    @include primaryFont(18);
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+// Typography
+h1, h2, h3 {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    @include secondaryFont(100);
+    line-height: 1;
+    width: 10%;
+}
+
+h2 {
+    @include secondaryFont(36);
+}
