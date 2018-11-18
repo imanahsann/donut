@@ -1,4 +1,28 @@
 // Results
-.results {
+.results-container {
     background: $primary-color;
+    display: none;
+}
+
+// Error message
+.message {
+    color: $secondary-color;
+    text-decoration: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.message a {
+    background: $white-shade;
+}
+
+.icon {
+    font-size: 15rem;
+    text-align: center;
+}
+
+// Result
+.donut-name {
+    @include cursive-font(60);
+    text-align: center;
 }

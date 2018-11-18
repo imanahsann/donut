@@ -14,23 +14,23 @@ quizApp.init = function () {
 // set score and matching donuts
 quizApp.donuts = [
     {
-        donut: 'an Original Glazed',
+        donut: 'Original glazed',
         score: 4
     },
     {
-        donut: 'a Strawberry Iced',
+        donut: 'Strawberry iced',
         score: 8
     },
     {
-        donut: 'a Chocolate Iced',
+        donut: 'Chocolate iced',
         score: 12
     },
     {
-        donut: 'a Boston Cream',
+        donut: 'Boston cream',
         score: 16
     },
     {
-        donut: 'a Chocolate Iced with Sprinkles',
+        donut: 'Chocolate iced with sprinkles',
         score: 20
     }
 ]
@@ -40,9 +40,16 @@ quizApp.formSubmit = function(){
     $('form').on('submit', function(event) {
         // prevent default form action
         event.preventDefault();
-        // check if all questions answered, post error on page if not
+        // check if all questions answered
         if ( $('input:checked').length < 4 ) {
-            $('.results').append('<div class="wrapper"><p><a href="#start">Please answer all questions!</a></p></div>');
+            // remove content if any
+            $('.results').empty();
+            // post error on page if unanswered questions
+            $('.results').append('<p class="icon"><i class="fas fa-exclamation-circle"></i></p><p class="message"><a href="#start" class="button">Please answer all questions!</a></p>');
+            // show results container
+            $(".results-container").css("display", "block");
+            // hide results header
+            $(".results-container h2").css("display", "none");
             // scroll to error message
             document.getElementById('results').scrollIntoView();
         }
@@ -74,10 +81,13 @@ quizApp.result = function(){
 };
 
 quizApp.postResult = function(){
-    // remove error message if any
+    // remove content if any
     $('.results').empty();
     // post result on page
-    $('.results').append(`<div class="wrapper"><p>You are ${quizApp.donut} donut!</p></div>`);
+    $('.results').append(`<p class="donut-name">${quizApp.donut} donut!</p><p><a href="#start">This isn't me... try again.</a></p>`);
+    // show results container and results heading
+    $(".results-container").css("display", "block");
+    $(".results-container h2").css("display", "block");
     // scroll to result
     document.getElementById('results').scrollIntoView();
 };

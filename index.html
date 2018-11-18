@@ -41,8 +41,9 @@
                                         <img src="assets/checkmark.png" alt="Checkmark">
                                     </div>
                                 </div>
-                                <span class="name">Jake</span>
-                                <span class="name">Gyllenhaal</span>
+                                <span class="visually-hidden">Jake Gyllenhaal</span>
+                                <span class="name" aria-hidden="true">Jake</span>
+                                <span class="name" aria-hidden="true">Gyllenhaal</span>
                             </label>
                         </div>
 
@@ -55,8 +56,9 @@
                                         <img src="assets/checkmark.png" alt="Checkmark">
                                     </div>
                                 </div>
-                                <span class="name">Katy</span>
-                                <span class="name">Perry</span>
+                                <span class="visually-hidden">Katy Perry</span>
+                                <span class="name" aria-hidden="true">Katy</span>
+                                <span class="name"aria-hidden="true">Perry</span>
                             </label>
                         </div>
 
@@ -69,8 +71,9 @@
                                         <img src="assets/checkmark.png" alt="Checkmark">
                                     </div>
                                 </div>
-                                <span class="name">Mindy</span>
-                                <span class="name">Kaling</span>
+                                <span class="visually-hidden">Mindy Kaling</span>
+                                <span class="name" aria-hidden="true">Mindy</span>
+                                <span class="name" aria-hidden="true">Kaling</span>
                             </label>
                         </div>
 
@@ -83,8 +86,9 @@
                                         <img src="assets/checkmark.png" alt="Checkmark">
                                     </div>
                                 </div>
-                                <span class="name">Jennifer</span>
-                                <span class="name">Lawrence</span>
+                                <span class="visually-hidden">Jennifer Lawrence</span>
+                                <span class="name" aria-hidden="true">Jennifer</span>
+                                <span class="name" aria-hidden="true">Lawrence</span>
                             </label>
                         </div>
 
@@ -97,8 +101,9 @@
                                         <img src="assets/checkmark.png" alt="Checkmark">
                                     </div>
                                 </div>
-                                <span class="name">Kanye</span>
-                                <span class="name">West</span>
+                                <span class="visually-hidden">Kanye West</span>
+                                <span class="name" aria-hidden="true">Kanye</span>
+                                <span class="name" aria-hidden="true">West</span>
                             </label>
                         </div>
                     </div>
@@ -171,9 +176,10 @@
                                         <img src="assets/checkmark.png" alt="Checkmark">
                                     </div>
                                 </div>
-                                <span class="name">American</span>
-                                <span class="name">Horror</span>
-                                <span class="name">Story</span>
+                                <span class="visually-hidden">American Horror Story</span>
+                                <span class="name" aria-hidden="true">American</span>
+                                <span class="name" aria-hidden="true">Horror</span>
+                                <span class="name" aria-hidden="true">Story</span>
                             </label>
                         </div>
 
@@ -187,8 +193,9 @@
                                         <img src="assets/checkmark.png" alt="Checkmark">
                                     </div>
                                 </div>
-                                <span class="name">This is</span>
-                                <span class="name">Us</span>
+                                <span class="visually-hidden">This is Us</span>
+                                <span class="name" aria-hidden="true">This is</span>
+                                <span class="name" aria-hidden="true">Us</span>
                             </label>
                         </div>
 
@@ -196,13 +203,14 @@
                             <input type="radio" name="question-3" value="4" id="question-3-option-4">
                             <label for="question-3-option-4">
                                 <div class="img-container">
-                                    <img src="assets/question-3/game-of-thrones.gif" alt="Cersei Lannister being a bad ass in Game of Thrones" class="celeb">
+                                    <img src="assets/question-3/game-of-thrones.gif" alt="Daenerys Targaryn wondering where her dragons are in Game of Thrones" class="celeb">
                                     <div class="overlay">
                                         <img src="assets/checkmark.png" alt="Checkmark">
                                     </div>
                                 </div>
-                                <span class="name">Game of</span>
-                                <span class="name">Thrones</span>
+                                <span class="visually-hidden">Game of Thrones</span>
+                                <span class="name" aria-hidden="true">Game of</span>
+                                <span class="name" aria-hidden="true">Thrones</span>
                             </label>
                         </div>
 
@@ -253,14 +261,21 @@
                             <label for="question-4-option-5">Optimistic</label>
                         </div>
                     </div>
-
+                    <div class="donut-img">
+                    </div>
                     <div class="submit-container">
                         <input type="submit" value="Which donut am I?" class="button button-submit">
                     </div>
                 </div>
             </section>
         </form>
-        <section class="results" id="results">
+        <section class="results-container" id="results">
+            <div class="wrapper">
+                <h2>You are a...</h2>
+                <div class="results">
+
+                </div>
+            </div>
         </section>
     </main>
     <footer>

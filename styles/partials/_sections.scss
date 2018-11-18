@@ -21,13 +21,17 @@ input[type=radio] {
 
 // Submit button
 .submit-container {
-    position: relative;
-    bottom: -77px;
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
     margin: 0;
     padding: 0;
+    margin: 20px auto -50px;
 }
 
 .button-submit {
     margin: 0 auto;
     display: block;
+    padding: 20px 40px;
+    @include cursive-font(30);
+    background: $white-shade;
 }
