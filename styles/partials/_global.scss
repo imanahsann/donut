@@ -4,14 +4,14 @@
 $primary-color: #db7da2;
 $secondary-color: #43261e;
 $accent-color: #e27f07;
-$light-pink: #FCDEED;
+$light-pink: #FFC0CB;
 $white-shade: #edeee0;
 
 // Mix-ins
 @mixin primary-font($font-size) {
     font-size: $font-size * 1px;
     font-size: ($font-size/10) * 1rem;
-    font-family: 'Poppins', Sans-Serif;
+    font-family: 'Raleway', Sans-Serif;
     line-height: 1.6;
 }
 
@@ -80,6 +80,6 @@ h2 {
     transition: background 1s;
 }
 
-.button:hover {
-    background: $accent-color;
+.button:hover, a.button:hover {
+    background: $light-pink;
 }
