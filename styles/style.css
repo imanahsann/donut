@@ -255,6 +255,16 @@ section .wrapper {
 input[type=radio] {
   visibility: hidden; }
 
+.submit-container {
+  position: relative;
+  bottom: -77px;
+  margin: 0;
+  padding: 0; }
+
+.button-submit {
+  margin: 0 auto;
+  display: block; }
+
 .question-1 {
   background: #db7da2; }
 
@@ -295,7 +305,7 @@ input[type=radio] {
   width: 80%;
   margin: 0 auto; }
 
-input[type='radio']:checked + label > .img-container > .overlay {
+.question-1 input[type='radio']:checked + label > .img-container > .overlay {
   display: block; }
 
 .name {
@@ -360,40 +370,71 @@ input[type='radio']:checked + label > .img-container > .overlay {
   text-align: center; }
 
 .question-2 label {
+  display: inline-block;
   background: #FFC0CB;
   padding: 5px;
   border: 1px solid #43261e;
   scale: 2;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
   -webkit-transition: background 1s;
   -o-transition: background 1s;
-  transition: background 1s; }
+  transition: background 1s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s; }
 
 .question-2 label:hover {
   background: #db7da2;
-  -webkit-transform: scale(2);
-  -ms-transform: scale(2);
-  transform: scale(2); }
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); }
 
 .question-2 .next .button {
   margin: 20px auto -20px; }
 
+.question-2 input[type='radio']:checked + label {
+  text-decoration: underline;
+  background: #db7da2;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); }
+
 .question-3 {
-  background: #43261e;
-  color: #edeee0; }
+  background: #FFC0CB; }
+
+.question-3 .wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-gap: 50px; }
+
+.question-3 .options {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px; }
+
+.question-3 img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block; }
+
+.question-3 input[type='radio']:checked + label > .img-container > .overlay {
+  display: block; }
+
+.question-3 label:hover .celeb {
+  border: 5px solid #db7da2; }
+
+.question-3 label:hover .name {
+  text-shadow: 1px 1px #db7da2; }
 
 .question-4 {
   background: #edeee0;
   padding-bottom: 50px; }
-
-.submit-container {
-  position: relative;
-  bottom: -77px;
-  margin: 0;
-  padding: 0; }
-
-.button-submit {
-  margin: 0 auto;
-  display: block; }
 
 .results {
   background: #db7da2; }

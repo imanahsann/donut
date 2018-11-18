@@ -1,0 +1,33 @@
+// Section styles
+section .wrapper {
+    padding: 100px 0;
+}
+
+// Next button
+.next {
+    text-align: center;
+}
+
+.next .button {
+    padding: 20px 40px;
+    @include cursive-font(30);
+    background: $white-shade;
+}
+
+// Hide radio buttons
+input[type=radio] {
+    visibility: hidden;
+}
+
+// Submit button
+.submit-container {
+    position: relative;
+    bottom: -77px;
+    margin: 0;
+    padding: 0;
+}
+
+.button-submit {
+    margin: 0 auto;
+    display: block;
+}

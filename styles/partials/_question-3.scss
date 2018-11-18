@@ -1,0 +1,39 @@
+// Question 3 styles
+.question-3 {
+    background: $light-pink;
+}
+
+// Grids
+.question-3 .wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-gap: 50px;
+}
+
+.question-3 .options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+// TV image
+.question-3 img {
+	border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+// When option selected
+.question-3 input[type='radio']:checked + label > .img-container > .overlay {
+        display: block;
+    }
+
+// TV hover
+.question-3 label:hover .celeb {
+    border: 5px solid $primary-color;
+}
+
+.question-3 label:hover .name {
+    text-shadow: 1px 1px $primary-color;
+}
