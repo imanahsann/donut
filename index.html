@@ -4,106 +4,219 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Which donut are you?</title>
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300" rel="stylesheet">
+    <title>DONUT | Which one are you?</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Pacifico|Poppins:500,700" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
         <div class="wrapper">
-            <h1>Which donut are you?</h1>
-            <a href="#start">I don't know, tell me!</a>
+            <h1 class="visually-hidden">Which donut are you?</h1>
+            <div class="header-grid">
+                <div class="header-text">
+                    <span class="header-1">Donut<span class="header-2">Which one are you?</span></span>
+                </div>
+                <div class="header-img">
+                </div>
+                <a href="#start" class="button">I need to know!</a>
+            </div>
         </div>
-        <img src="./assets/donut-header.jpg" class="header-img" alt="">
     </header>
     <main id="start">
         <form action="">
             <section class="question-1">
                 <!-- replace values with point system -->
                 <div class="wrapper">
-                    <h2 class="question-1-heading">1. QUESTION ONE?</h2>
+                    <h2 class="question-1-heading">1. Which celebrity would you rather spend the day with?</h2>
 
-                    <label for="question-1-option-1">OPTION ONE</label>
-                    <input type="radio" name="question-1" value="1" id="question-1-option-1">
+                    <div class="options">
+                        <div class="question-option">
+                            <input type="radio" name="question-1" value="1" id="question-1-option-1">
+                            <label for="question-1-option-1">
+                                <div class="img-container">
+                                    <img src="assets/question-1/jake.gif" alt="Jake Gyllenhaal speaking in black and white">
+                                    <div class="overlay">
+                                        <img src="assets/checkmark.png" alt="Checkmark">
+                                    </div>
+                                </div>
+                                <span class="name">Jake</span>
+                                <span class="name">Gyllenhaal</span>
+                            </label>
+                        </div>
 
-                    <label for="question-1-option-2">OPTION TWO</label>
-                    <input type="radio" name="question-1" value="2" id="question-1-option-2">
+                        <div class="question-option">
+                            <input type="radio" name="question-1" value="4" id="question-1-option-2">
+                            <label for="question-1-option-2">
+                                <div class="img-container">
+                                    <img src="assets/question-1/katy.gif" alt="Katy perry talking and smiling in black and white">
+                                    <div class="overlay">
+                                        <img src="assets/checkmark.png" alt="Checkmark">
+                                    </div>
+                                </div>
+                                <span class="name">Katy</span>
+                                <span class="name">Perry</span>
+                            </label>
+                        </div>
 
-                    <label for="question-1-option-3">OPTION THREE</label>
-                    <input type="radio" name="question-1" value="3" id="question-1-option-3">
+                        <div class="question-option">
+                            <input type="radio" name="question-1" value="2" id="question-1-option-3">
+                            <label for="question-1-option-3">
+                                <div class="img-container">
+                                    <img src="assets/question-1/mindy.gif" alt="Mindy Kaling speaking in black and white">
+                                    <div class="overlay">
+                                        <img src="assets/checkmark.png" alt="Checkmark">
+                                    </div>
+                                </div>
+                                <span class="name">Mindy</span>
+                                <span class="name">Kaling</span>
+                            </label>
+                        </div>
 
-                    <label for="question-1-option-4">OPTION FOUR</label>
-                    <input type="radio" name="question-1" value="4" id="question-1-option-4">
+                        <div class="question-option">
+                            <input type="radio" name="question-1" value="3" id="question-1-option-4">
+                            <label for="question-1-option-4">
+                                <div class="img-container">
+                                    <img src="assets/question-1/jennifer.gif" alt="Jennifer Lawrence noping in black and white">
+                                    <div class="overlay">
+                                        <img src="assets/checkmark.png" alt="Checkmark">
+                                    </div>
+                                </div>
+                                <span class="name">Jennifer</span>
+                                <span class="name">Lawrence</span>
+                            </label>
+                        </div>
 
-                    <label for="question-1-option-5">OPTION FIVE</label>
-                    <input type="radio" name="question-1" value="5" id="question-1-option-5">
+                        <div class="question-option">
+                            <input type="radio" name="question-1" value="5" id="question-1-option-5">
+                            <label for="question-1-option-5">
+                                <div class="img-container">
+                                    <img src="assets/question-1/kanye.gif" alt="Kanye West not impressed in black and white">
+                                    <div class="overlay">
+                                        <img src="assets/checkmark.png" alt="Checkmark">
+                                    </div>
+                                </div>
+                                <span class="name">Kanye</span>
+                                <span class="name">West</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="next">
+                        <a href="#question-2" class="button">Next!</a>
+                    </div>
                 </div>
             </section>
-            <section class="question-2">
+            <section class="question-2" id="question-2">
                 <div class="wrapper">
-                    <h2 class="question-2-heading">2. QUESTION TWO?</h2>
+                    <h2 class="question-2-heading">2. What is your ideal date night?</h2>
 
-                    <label for="question-2-option-1">OPTION ONE</label>
-                    <input type="radio" name="question-2" value="1" id="question-2-option-1">
+                    <div class="options">
+                        <div class="question-option">
+                            <input type="radio" name="question-2" value="2" id="question-2-option-1">
+                            <label for="question-2-option-1">A fancy dinner in Yorkville</label>
+                        </div>
 
-                    <label for="question-2-option-2">OPTION TWO</label>
-                    <input type="radio" name="question-2" value="2" id="question-2-option-2">
+                        <div class="question-option">
+                            <input type="radio" name="question-2" value="3" id="question-2-option-2">
+                            <label for="question-2-option-2">Friday Night Live at the ROM</label>
+                        </div>
 
-                    <label for="question-2-option-3">OPTION THREE</label>
-                    <input type="radio" name="question-2" value="3" id="question-2-option-3">
+                        <div class="question-option">
+                            <input type="radio" name="question-2" value="5" id="question-2-option-3">
+                            <label for="question-2-option-3">Bar hopping! I'd rather not remember this.</label>
+                        </div>
 
-                    <label for="question-2-option-4">OPTION FOUR</label>
-                    <input type="radio" name="question-2" value="4" id="question-2-option-4">
+                        <div class="question-option">
+                            <input type="radio" name="question-2" value="1" id="question-2-option-4">
+                            <label for="question-2-option-4">Netflix and chill</label>
+                        </div>
 
-                    <label for="question-2-option-5">OPTION FIVE</label>
-                    <input type="radio" name="question-2" value="5" id="question-2-option-5">
+                        <div class="question-option">
+                            <input type="radio" name="question-2" value="4" id="question-2-option-5">
+                            <label for="question-2-option-5">A spontaneous trip</label>
+                        </div>
+                    </div>
+                    <div class="donut-img">
+                        <!-- <img src="assets/donut-pink.png" alt="Pink Donut"> -->
+                    </div>
+                    <div class="next">
+                        <a href="#question-3" class="button">Next!</a>
+                    </div>
                 </div>
             </section>
-            <section class="question-3">
+            <section class="question-3" id="question-3">
                 <div class="wrapper">
-                    <h2 class="question-3-heading">3. QUESTION THREE?</h2>
+                    <h2 class="question-3-heading">3. Which show would you binge watch?</h2>
 
-                    <label for="question-3-option-1">OPTION ONE</label>
-                    <input type="radio" name="question-3" value="1" id="question-3-option-1">
+                    <div class="options">
+                        <div class="question-option">
+                            <input type="radio" name="question-3" value="3" id="question-3-option-1">
+                            <label for="question-3-option-1">Riverdale</label>
+                        </div>
 
-                    <label for="question-3-option-2">OPTION TWO</label>
-                    <input type="radio" name="question-3" value="2" id="question-3-option-2">
+                        <div class="question-option">
+                            <input type="radio" name="question-3" value="5" id="question-3-option-2">
+                            <label for="question-3-option-2">American Horror Story</label>
+                        </div>
 
-                    <label for="question-3-option-3">OPTION THREE</label>
-                    <input type="radio" name="question-3" value="3" id="question-3-option-3">
+                        <div class="question-option">
+                            <input type="radio" name="question-3" value="1" id="question-3-option-3">
+                            <label for="question-3-option-3">This Is Us</label>
+                        </div>
 
-                    <label for="question-3-option-4">OPTION FOUR</label>
-                    <input type="radio" name="question-3" value="4" id="question-3-option-4">
+                        <div class="question-option">
+                            <input type="radio" name="question-3" value="4" id="question-3-option-4">
+                            <label for="question-3-option-4">Game of Thrones</label>
+                        </div>
 
-                    <label for="question-3-option-5">OPTION FIVE</label>
-                    <input type="radio" name="question-3" value="5" id="question-3-option-5">
+                        <div class="question-option">
+                            <input type="radio" name="question-3" value="2" id="question-3-option-5">
+                            <label for="question-3-option-5">Friends</label>
+                        </div>
+                    </div>
+                    <div class="next">
+                        <a href="#question-4" class="button">Next!</a>
+                    </div>
                 </div>
             </section>
-            <section class="question-4">
+            <section class="question-4" id="question-4">
                 <div class="wrapper">
-                    <h2 class="question-4-heading">4. QUESTION FOUR?</h2>
+                    <h2 class="question-4-heading">4. How would your friends describe you?</h2>
+                    <div class="options">
+                        <div class="question-option">
+                            <input type="radio" name="question-4" value="3" id="question-4-option-1">
+                            <label for="question-4-option-1">Cynical</label>
+                        </div>
 
-                    <label for="question-4-option-1">OPTION ONE</label>
-                    <input type="radio" name="question-4" value="1" id="question-4-option-1">
+                        <div class="question-option">
+                            <input type="radio" name="question-4" value="4" id="question-4-option-2">
+                            <label for="question-4-option-2">The life of the party</label>
+                        </div>
 
-                    <label for="question-4-option-2">OPTION TWO</label>
-                    <input type="radio" name="question-4" value="2" id="question-4-option-2">
+                        <div class="question-option">
+                            <input type="radio" name="question-4" value="5" id="question-4-option-3">
+                            <label for="question-4-option-3">Dramatic AF</label>
+                        </div>
 
-                    <label for="question-4-option-3">OPTION THREE</label>
-                    <input type="radio" name="question-4" value="3" id="question-4-option-3">
+                        <div class="question-option">
+                            <input type="radio" name="question-4" value="1" id="question-4-option-4">
+                            <label for="question-4-option-4">Reliable</label>
+                        </div>
 
-                    <label for="question-4-option-4">OPTION FOUR</label>
-                    <input type="radio" name="question-4" value="4" id="question-4-option-4">
+                        <div class="question-option">
+                            <input type="radio" name="question-4" value="2" id="question-4-option-5">
+                            <label for="question-4-option-5">Optimistic</label>
+                        </div>
+                    </div>
 
-                    <label for="question-4-option-5">OPTION FIVE</label>
-                    <input type="radio" name="question-4" value="5" id="question-4-option-5">
-
-                    <input type="submit" value="Which donut am I?">
+                    <div class="submit-container">
+                        <input type="submit" value="Which donut am I?" class="button button-submit">
+                    </div>
                 </div>
             </section>
         </form>
-        <section class="results">
-
+        <section class="results" id="results">
         </section>
     </main>
     <footer>

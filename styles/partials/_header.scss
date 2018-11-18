@@ -1,18 +1,41 @@
 // Header styles
 header {
-    background: $whiteShade;
+    background: $white-shade;
+}
+
+.header-grid {
+    display: grid;
     height: 100vh;
-    position: relative;
+    grid-template-rows: auto 1fr auto;
 }
 
-header img {
-    width: 100%;
+.header-text {
+    text-align: center;
+}
+
+.header-img {
+    background: url(../assets/donut-header-a.jpg);
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-1 {
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+
+.header-2 {
+    @include cursive-font(47);
+    text-transform: lowercase;
+    text-align: right;
     position: absolute;
-    top: 0;
-    left: 0;
-}
-
-h1 {
-    position: relative;
-    z-index: 1000;
+    top: -17px;
+    right: -5px;
+    z-index: 100;
+    text-shadow: 1px 1px $white-shade;
 }

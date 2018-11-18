@@ -1,24 +1,30 @@
 // Global styles
 
 // Variables
-$primaryColor: #FF87AB;
-$secondaryColor: #43261e;
-$accentColor: #FCC8C2;
-$lightPink: #FCDEED;
-$whiteShade: #edeee0;
+$primary-color: #db7da2;
+$secondary-color: #43261e;
+$accent-color: #e27f07;
+$light-pink: #FCDEED;
+$white-shade: #edeee0;
 
 // Mix-ins
-@mixin primaryFont($fontSize) {
-    font-size: $fontSize * 1px;
-    font-size: ($fontSize/10) * 1rem;
+@mixin primary-font($font-size) {
+    font-size: $font-size * 1px;
+    font-size: ($font-size/10) * 1rem;
     font-family: 'Poppins', Sans-Serif;
     line-height: 1.6;
 }
 
-@mixin secondaryFont($fontSize) {
-    font-size: $fontSize * 1px;
-    font-size: ($fontSize/10) * 1rem;
+@mixin secondary-font($font-size) {
+    font-size: $font-size * 1px;
+    font-size: ($font-size/10) * 1rem;
     font-family: 'Abril Fatface', Cursive;
+}
+
+@mixin cursive-font($font-size) {
+    font-size: $font-size * 1px;
+    font-size: ($font-size/10) * 1rem;
+    font-family: 'Pacifico', Cursive;
 }
 
 // Layout
@@ -28,9 +34,9 @@ html {
 }
 
 body {
-    background: $whiteShade;
-    color: $secondaryColor;
-    @include primaryFont(18);
+    background: $white-shade;
+    color: $secondary-color;
+    @include primary-font(24);
 }
 
 .wrapper {
@@ -40,7 +46,7 @@ body {
 }
 
 // Typography
-h1, h2, h3 {
+h1, h2, h3, .header-1 {
     text-transform: uppercase;
     margin: 0;
     padding: 0;
@@ -51,12 +57,29 @@ p {
     padding: 0;
 }
 
-h1 {
-    @include secondaryFont(100);
-    line-height: 1;
-    width: 10%;
+h1, .header-1 {
+    @include secondary-font(150);
+    text-shadow: 3px 3px $primary-color;
 }
 
 h2 {
-    @include secondaryFont(36);
+    @include secondary-font(36);
+}
+
+// Links
+
+.button {
+    display: inline-block;
+    margin: 20px auto;
+    background: $primary-color;
+    padding: 5px 20px;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+    text-decoration: none;
+    @include cursive-font(24);
+    transition: background 1s;
+}
+
+.button:hover {
+    background: $accent-color;
 }

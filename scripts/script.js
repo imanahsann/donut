@@ -42,7 +42,9 @@ quizApp.formSubmit = function(){
         event.preventDefault();
         // check if all questions answered, post error on page if not
         if ( $('input:checked').length < 4 ) {
-            $('.results').append('<p>Please answer all questions!</p>');
+            $('.results').append('<div class="wrapper"><p><a href="#start">Please answer all questions!</a></p></div>');
+            // scroll to error message
+            document.getElementById('results').scrollIntoView();
         }
 
         // retrieve checked values, convert to array, convert to numbers, add together for total points
@@ -75,5 +77,7 @@ quizApp.postResult = function(){
     // remove error message if any
     $('.results').empty();
     // post result on page
-    $('.results').append(`<p>You are ${quizApp.donut} donut!</p>`);
+    $('.results').append(`<div class="wrapper"><p>You are ${quizApp.donut} donut!</p></div>`);
+    // scroll to result
+    document.getElementById('results').scrollIntoView();
 };
