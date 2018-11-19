@@ -2,6 +2,7 @@
 .results-container {
     background: $primary-color;
     display: none;
+    height: 100vh;
 }
 
 // Error message
@@ -10,10 +11,6 @@
     text-decoration: none;
     font-size: 1.8rem;
     text-align: center;
-}
-
-.message a {
-    background: $white-shade;
 }
 
 .icon {
@@ -25,4 +22,52 @@
 .donut-name {
     @include cursive-font(60);
     text-align: center;
+}
+
+.results {
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-gap: 30px;
+}
+
+.results a {
+    background: $white-shade;
+}
+
+.icon a {
+    color: $secondary-color;
+    background: $primary-color;
+}
+
+// Try again
+.try-again {
+    text-align: center;
+}
+
+.end {
+    background: $white-shade;
+    height: 100vh;
+    display: none;
+}
+
+//Credits
+
+footer {
+    background: $secondary-color;
+    color: $white-shade;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+footer a {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

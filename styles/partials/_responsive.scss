@@ -1,0 +1,27 @@
+// Responsive styles
+@media (max-width: 730px) {
+    h1, .header-1 {
+        @include secondary-font(100);
+        text-shadow: 3px 3px $primary-color;
+    }
+
+    h2 {
+        @include secondary-font(24);
+    }
+}
+
+.header-2 {
+    @include cursive-font(31);
+    top: -10px;
+    right: -5px;
+}
+
+.header-grid {
+    grid-template-rows: auto 1fr auto;
+}
+
+.header-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
