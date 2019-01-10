@@ -1,27 +1,313 @@
 // Responsive styles
-@media (max-width: 730px) {
+@media(min-width: 870px) and (min-height: 1115px) {
+    // For long screens
+    .question-1 .wrapper, .question-2 .wrapper, .question-3 .wrapper, .question-4 .wrapper {
+        min-height: auto;
+        grid-template-rows: auto auto auto;
+    }
+}
+@media(max-width: 1000px) {
+    // Increase wrapper width
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 870px) {
+    // Shrink header titles
+    h1, .header-1 {
+        @include secondary-font(120);
+        text-shadow: 3px 3px $primary-color;
+    }
+
+    .header-2 {
+        @include cursive-font(40);
+        top: -16px;
+        right: -5px;
+    }
+
+    // Decrease wrapper padding in sections
+    section .wrapper {
+        padding: 50px 0;
+    }
+
+    // Questions 1 and 3, options on 2 rows
+    .question-1 .wrapper, .question-3 .wrapper {
+        grid-gap: 10px;
+    }
+
+    .question-1 .options, .question-3 .options {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto;
+        justify-content: center;
+    }
+
+    .circles:nth-of-type(1) {
+        grid-column: 1 / 5;
+    }
+
+    .circles:nth-of-type(2) {
+        grid-column: 5 / 9;
+    }
+
+    .circles:nth-of-type(3) {
+        grid-column: 9 / 13;
+    }
+
+    .circles:nth-of-type(4) {
+        grid-column: 3 / 7;
+    }
+
+    .circles:nth-of-type(5) {
+        grid-column: 7 / 11;
+    }
+
+    .question-1 .img-container, .question-3 .img-container {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .question-1 .wrapper, .question-3 .wrapper {
+        height: auto;
+    }
+
+    .celeb {
+        width: 100%;
+    }
+
+    // Questions 2 and 4, re align options
+    .question-2 .wrapper, .question-4 .wrapper {
+        grid-template-rows: auto auto auto;
+        min-height: auto;
+        height: auto;
+    }
+
+    .question-2 .donut-img {
+        background-position: right;
+    }
+
+    .question-2 .wrapper, .question-4 .wrapper {
+        padding: 50px 0;
+    }
+
+    .question-2 .question-option:nth-child(1) {
+        text-align: left;
+    }
+
+    .question-2 .question-option:nth-child(3) {
+        text-align: left;
+    }
+
+    .question-2 .question-option:nth-child(4) {
+        margin-left: 0;
+    }
+
+    .question-2 .question-option:nth-child(5) {
+        text-align: left;
+    }
+
+    .rectangles {
+        align-self: center;
+    }
+
+    .question-4 .donut-img {
+        background-position: center;
+    }
+
+    .question-4 .question-option:nth-child(1) {
+        text-align: left;
+    }
+
+    .question-4 .question-option:nth-child(2) {
+        text-align: left;
+        margin-right: 0;
+    }
+
+    .question-4 .question-option:nth-child(3) {
+        margin-left: 0;
+    }
+
+    .question-4 .question-option:nth-child(4) {
+        margin-right: 0;
+        text-align: left;
+    }
+
+    .question-4 .question-option:nth-child(5) {
+        margin-left: 0;
+    }
+
+    // Shrink submit button
+    .button-submit {
+        padding: 5px 20px;
+        font-size: 3rem;
+    }
+
+    // Shrink results
+    .results h2 {
+        font-size: 3rem;
+    }
+
+    .donut-name {
+        font-size: 4.5rem;
+    }
+
+    .donut-description {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 670px) {
+    // Adjust header background sizing across rows
+    .header-text {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .header-img {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+        background-position-y: top;
+    }
+
+    header .button {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    // Questions 1 and 3, options in one column
+    .question-1 .options, .question-3 .options {
+        grid-template-columns: 60%;
+        grid-template-rows: repeat(5, auto);
+        justify-content: center;
+    }
+
+    .circles:nth-of-type(1) {
+        grid-column: 1 / 2;
+    }
+
+    .circles:nth-of-type(2) {
+        grid-column: 1 / 2;
+    }
+
+    .circles:nth-of-type(3) {
+        grid-column: 1 / 2;
+    }
+
+    .circles:nth-of-type(4) {
+        grid-column: 1 / 2;
+    }
+
+    .circles:nth-of-type(5) {
+        grid-column: 1 / 2;
+    }
+
+    .submit-container {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 460px) {
+    // Shrink header titles
     h1, .header-1 {
         @include secondary-font(100);
         text-shadow: 3px 3px $primary-color;
     }
 
-    h2 {
-        @include secondary-font(24);
+    .header-2 {
+        @include cursive-font(31);
+        top: -11px;
+        right: -3px;
+    }
+
+    .question-2 .wrapper, .question-4 .wrapper {
+        grid-template-rows: auto auto auto;
+        min-height: auto;
+        padding-bottom: 30px;
+    }
+
+    .question-2 .options, .question-4 .options {
+        padding: 30px 0;
+    }
+
+    // Shrink section titles
+    section h2 {
+        font-size: 3rem;
+    }
+
+    // Shrink buttons
+    .next .button {
+        padding: 5px 20px;
+    }
+
+    .next .button, .button-submit {
+        font-size: 2.4rem;
+    }
+
+    // Shrink option text
+    .question-2 label, .question-4 label {
+        font-size: 2rem;
+        line-height: 1;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 414px) and (max-height: 695px) {
+    // For small screens, give results donut a height
+    .results-container .wrapper {
+        grid-template-rows: auto 50vh auto;
+    }
+}
+
+@media (max-width: 414px) and (min-height: 600px) {
+    // For narrow and long screens, shrink heights
+    .header-grid {
+        height: auto;
+        grid-template-rows: auto 40vh auto;
+        padding-bottom: 30px;
+    }
+
+    header .button {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    // Shrink header titles
+    h1, .header-1 {
+        @include secondary-font(90);
+        text-shadow: 3px 3px $primary-color;
     }
 
     .header-2 {
-    @include cursive-font(31);
-    top: -10px;
-    right: -5px;
+        @include cursive-font(25);
+        top: -8px;
+        right: -2px;
+    }
+}
+
+@media (max-width: 385px) {
+    // Shrink section titles
+    section h2 {
+        font-size: 2.5rem;
+        text-transform: inherit;
     }
 
-    .header-grid {
-        grid-template-rows: auto 1fr auto;
+    .results h2 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 365px) {
+    // Shrink header titles
+    h1, .header-1 {
+        @include secondary-font(80);
+        text-shadow: 3px 3px $primary-color;
     }
 
-    .header-img {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    .header-2 {
+        @include cursive-font(20);
+        top: -4px;
+        right: -1px;
     }
 }

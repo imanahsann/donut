@@ -1,11 +1,11 @@
 // Question 3 styles
 .question-3 {
-    background: $light-pink;
+    background: $primary-tint;
 }
 
 // Grids
 .question-3 .wrapper {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-rows: auto auto 1fr;
     grid-gap: 50px;
@@ -27,6 +27,11 @@
 // When option selected
 .question-3 input[type='radio']:checked + label > .img-container > .overlay {
         display: block;
+    }
+
+.question-3 input[type='radio']:focus + label > .img-container > .overlay {
+        border: 5px solid $highlight-color;
+        border-radius: 50%;
     }
 
 // TV hover

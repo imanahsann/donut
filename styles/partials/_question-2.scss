@@ -1,11 +1,11 @@
 // Question 2 styles
 .question-2 {
-    background: $white-shade;
+    background: $tertiary-color;
 }
 
 // Grids
 .question-2 .wrapper {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr auto;
@@ -61,7 +61,7 @@
 // Style options
 .question-2 label {
     display: inline-block;
-    background: $light-pink;
+    background: $primary-tint;
     padding: 5px;
     border: 1px solid $secondary-color;
     scale: 2;
@@ -87,3 +87,8 @@
         background: $primary-color;
         transform: scale(1.1);
 }
+
+// When option in focus
+.question-2 input[type='radio']:focus + label  {
+        border: 5px solid $highlight-color;
+    }

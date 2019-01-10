@@ -1,11 +1,11 @@
 // Question 4 styles
 .question-4 {
-    background: $white-shade;
+    background: $tertiary-color;
 }
 
 // Grids
 .question-4 .wrapper {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr auto;
@@ -62,7 +62,7 @@
 // Style options
 .question-4 label {
     display: inline-block;
-    background: $light-pink;
+    background: $primary-tint;
     padding: 5px;
     border: 1px solid $secondary-color;
     scale: 2;
@@ -83,3 +83,7 @@
         background: $primary-color;
         transform: scale(1.1);
 }
+
+.question-4 input[type='radio']:focus + label  {
+        border: 5px solid $highlight-color;
+    }

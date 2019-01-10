@@ -4,8 +4,9 @@
 $primary-color: #db7da2;
 $secondary-color: #43261e;
 $accent-color: #e27f07;
-$light-pink: #FFC0CB;
-$white-shade: #edeee0;
+$primary-tint: #FFC0CB;
+$tertiary-color: #edeee0;
+$highlight-color: #3b99fc; //for accessibility focus
 
 // Mix-ins
 @mixin primary-font($font-size) {
@@ -34,7 +35,7 @@ html {
 }
 
 body {
-    background: $white-shade;
+    background: $tertiary-color;
     color: $secondary-color;
     @include primary-font(24);
 }
@@ -43,6 +44,10 @@ body {
     width: 80%;
     max-width: 1280px;
     margin: 0 auto;
+}
+
+.hide {
+    display: none;
 }
 
 // Typography
@@ -67,7 +72,6 @@ h2 {
 }
 
 // Links
-
 .button {
     display: inline-block;
     margin: 20px auto;
@@ -81,5 +85,39 @@ h2 {
 }
 
 .button:hover, a.button:hover {
-    background: $light-pink;
+    background: $primary-tint;
+}
+
+.button:focus {
+    outline: 3px solid $highlight-color;
+}
+
+// Alerts
+.swal-modal {
+    background-color: $tertiary-color;
+}
+
+.swal-title, .swal-text {
+    color: $secondary-color;
+}
+
+.swal-icon--error__line {
+    background-color: $primary-color;
+}
+
+.swal-icon--error {
+    border-color: $primary-color;
+}
+
+.swal-button {
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
+.swal-button:not([disabled]):hover {
+    background-color: $primary-tint;
+}
+
+.swal-button:active {
+    background-color: $primary-tint;
 }

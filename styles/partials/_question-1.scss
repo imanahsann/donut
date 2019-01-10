@@ -5,7 +5,7 @@
 
 // Grids
 .question-1 .wrapper {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-rows: auto auto 1fr;
     grid-gap: 50px;
@@ -39,7 +39,7 @@
     left: 0;
     border-radius: 50%;
     text-align: center;
-    color: $white-shade;
+    color: $tertiary-color;
     padding-top: 15%;
 }
 
@@ -53,6 +53,11 @@
         display: block;
     }
 
+.question-1 input[type='radio']:focus + label > .img-container > .overlay {
+        border: 5px solid $highlight-color;
+        border-radius: 50%;
+    }
+
 // Celeb name
 .name {
     display: block;
@@ -63,9 +68,9 @@
 
 // Celeb hover
 .question-1 label:hover .celeb {
-    border: 5px solid $white-shade;
+    border: 5px solid $tertiary-color;
 }
 
 .question-1 label:hover .name {
-    text-shadow: 1px 1px $white-shade;
+    text-shadow: 1px 1px $tertiary-color;
 }

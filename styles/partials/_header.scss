@@ -1,6 +1,6 @@
 // Header styles
 header {
-    background: $white-shade;
+    background: $tertiary-color;
 }
 
 .header-grid {
@@ -37,5 +37,5 @@ header {
     top: -17px;
     right: -5px;
     z-index: 100;
-    text-shadow: 1px 1px $white-shade;
+    text-shadow: 1px 1px $tertiary-color;
 }

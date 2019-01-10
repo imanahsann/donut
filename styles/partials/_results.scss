@@ -1,73 +1,58 @@
 // Results
 .results-container {
     background: $primary-color;
-    display: none;
-    height: 100vh;
 }
 
-// Error message
-.message {
-    color: $secondary-color;
-    text-decoration: none;
-    font-size: 1.8rem;
-    text-align: center;
+.results-container .wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    padding: 50px 0 30px 0;
 }
 
-.icon {
-    font-size: 15rem;
-    text-align: center;
-}
-
-// Result
-.donut-name {
-    @include cursive-font(60);
-    text-align: center;
-}
-
+// Final results
 .results {
     text-align: center;
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-gap: 30px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
-.results a {
-    background: $white-shade;
+// Results title
+.result h2 {
+    text-align-last: left;
 }
 
-.icon a {
-    color: $secondary-color;
-    background: $primary-color;
+.donut-name {
+    @include cursive-font(60);
+}
+
+.donut-description {
+    text-align: left;
+}
+
+// Results background
+.results-container .donut-img {
+    background: url('../assets/donut-yellow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
 }
 
 // Try again
+.try {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    text-align: center;
+    align-self: end;
+}
+
 .try-again {
-    text-align: center;
+    margin: 20px 0 0 0;
 }
 
-.end {
-    background: $white-shade;
-    height: 100vh;
-    display: none;
-}
-
-//Credits
-
-footer {
-    background: $secondary-color;
-    color: $white-shade;
-    text-align: center;
-    padding: 10px;
-    margin: 0;
-    font-size: 1.2rem;
-}
-
-footer a {
-    color: $primary-color;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
+.try a {
+    background: $tertiary-color;
 }
