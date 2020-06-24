@@ -5,8 +5,8 @@ header {
 
 .header-grid {
     display: grid;
-    height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    grid-template-rows: auto minmax(200px, 1fr) auto;
 }
 
 .header-text {

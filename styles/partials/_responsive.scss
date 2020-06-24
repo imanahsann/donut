@@ -258,10 +258,11 @@
     }
 }
 
-@media (max-width: 414px) and (min-height: 600px) {
-    // For narrow and long screens, shrink heights
+@media (max-width: 600px) {
+    // For small screens, shrink heights
     .header-grid {
         height: auto;
+        min-height: auto;
         grid-template-rows: auto 40vh auto;
         padding-bottom: 30px;
     }
